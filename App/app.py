@@ -5,7 +5,7 @@ import pickle
 with open("random_forest.pkl","rb") as f:
     model = pickle.load(f)
 
-with open("/scaler.pkl","rb") as f:
+with open("scaler.pkl","rb") as f:
    scaler = pickle.load(f)   
 
 x_train_columns = pd.read_csv("x_train.csv").columns.tolist()   
