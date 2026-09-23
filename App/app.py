@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd  
 import pickle  
 
-with open("D:/Bank_Churn_Project/random_forest.pkl","rb") as f:
+with open("random_forest.pkl","rb") as f:
     model = pickle.load(f)
 
-with open("D:/Bank_Churn_Project/scaler.pkl","rb") as f:
+with open("scaler.pkl","rb") as f:
    scaler = pickle.load(f)   
 
-x_train_columns = pd.read_csv("D:/Bank_Churn_Project/x_train.csv").columns.tolist()   
+x_train_columns = pd.read_csv("x_train.csv").columns.tolist()   
 
 st.title("Bank Customer Churn Predictor")  
 st.write("Enter a customer's details to see their churn. ")
